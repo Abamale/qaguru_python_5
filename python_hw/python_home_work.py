@@ -51,7 +51,8 @@ def test_find_yangest_user():
 def test_readable_function():
     open_browser(browser_name="Chrome")
     go_to_companyname_homepage(page_url="https://companyname.com")
-    find_registration_button_on_login_page(page_url="https://companyname.com/login", button_text="Register")
+    find_registration_button_on_login_page(page_url="https://companyname.com/login",
+                                           button_text="Register")
 
 
 def my_function(func, *args):
@@ -76,4 +77,5 @@ def go_to_companyname_homepage(page_url):
 def find_registration_button_on_login_page(page_url, button_text):
     actual_result = my_function(find_registration_button_on_login_page, page_url, button_text)
 
-    assert actual_result == "Find Registration Button On Login Page [https://companyname.com/login, Register]"
+    assert actual_result == """Find Registration Button On Login Page 
+    [https://companyname.com/login, Register]"""
