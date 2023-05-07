@@ -11,7 +11,7 @@ try:
     button1 = browser.find_element(By.TAG_NAME, "button")
     button1.click()
 
-    new_window = browser.window_handles[1]
+    new_window = browser.window_handles[0]
     browser.switch_to.window(new_window)
 
 
